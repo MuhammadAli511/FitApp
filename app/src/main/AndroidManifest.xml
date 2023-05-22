@@ -12,6 +12,21 @@
         android:theme="@style/Theme.FitApp"
         tools:targetApi="31">
         <activity
+            android:name=".AddMeal"
+            android:exported="false" />
+        <activity
+            android:name=".EnterMeal"
+            android:exported="false" />
+        <activity
+            android:name=".CalculateBodyFat"
+            android:exported="false" />
+        <activity
+            android:name=".CalculateBMI"
+            android:exported="false" />
+        <activity
+            android:name=".MainPage"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

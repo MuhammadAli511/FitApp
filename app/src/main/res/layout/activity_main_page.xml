@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainPage">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/backgroundcolor"
+        android:orientation="vertical"
+        android:layout_weight="0.25">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/montserratalternatesregular"
+                android:text="Welcome"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/white"
+                android:textSize="28dp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_below="@id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Begin your fitness journey today !"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.75"
+        android:orientation="vertical">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bmi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="13dp"
+            android:text="Calculate BMI"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:backgroundTint="#DFB300"
+            app:cornerRadius="20dp"
+            android:layout_marginHorizontal="60dp"
+            android:layout_marginTop="100dp"
+            android:textAllCaps="false">
+
+        </com.google.android.material.button.MaterialButton>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bodyfat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="13dp"
+            android:text="Calculate Body Fat"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:backgroundTint="#DFB300"
+            app:cornerRadius="20dp"
+            android:layout_marginHorizontal="60dp"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="false">
+
+        </com.google.android.material.button.MaterialButton>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/meals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="13dp"
+            android:text="Enter Meals"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:backgroundTint="#DFB300"
+            app:cornerRadius="20dp"
+            android:layout_marginHorizontal="60dp"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="false">
+
+        </com.google.android.material.button.MaterialButton>
+
+
+    </LinearLayout>
+
+</LinearLayout>
