@@ -1,9 +1,196 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroundcolor"
     tools:context=".CalculateBodyFat">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/tvBodyFat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Body Fat Calculator"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30dp" />
+
+    <LinearLayout
+        android:id="@+id/llAge"
+        android:paddingTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvBodyFat"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp">
+
+        <EditText
+            android:id="@+id/etAge"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:ems="10"
+            android:hint="Enter your age"
+            android:inputType="number"
+            android:background="@drawable/roundedrectangle"
+            android:textColor="@color/black"
+            android:textColorHint="#D4B300"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llWeight"
+        android:paddingTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llAge"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp">
+
+        <EditText
+            android:id="@+id/etWeight"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:ems="10"
+            android:hint="Enter your weight in kg"
+            android:inputType="numberDecimal"
+            android:background="@drawable/roundedrectangle"
+            android:textColor="@color/black"
+            android:textColorHint="#D4B300"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llHeight"
+        android:paddingTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llWeight"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp">
+
+        <EditText
+            android:id="@+id/etHeight"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:ems="10"
+            android:hint="Enter your height in cm"
+            android:inputType="numberDecimal"
+            android:background="@drawable/roundedrectangle"
+            android:textColor="@color/black"
+            android:textColorHint="#D4B300"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llNeck"
+        android:paddingTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llHeight"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp">
+
+        <EditText
+            android:id="@+id/etNeck"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:ems="10"
+            android:hint="Enter your neck perimeter in cm"
+            android:inputType="numberDecimal"
+            android:background="@drawable/roundedrectangle"
+            android:textColor="@color/black"
+            android:textColorHint="#D4B300"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llWaist"
+        android:paddingTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llNeck"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp">
+
+        <EditText
+            android:id="@+id/etWaist"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:ems="10"
+            android:hint="Enter your waist perimeter in cm"
+            android:inputType="numberDecimal"
+            android:background="@drawable/roundedrectangle"
+            android:textColor="@color/black"
+            android:textColorHint="#D4B300"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/calculateBodyFatButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="13dp"
+        android:text="Calculate"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:backgroundTint="#DFB300"
+        app:cornerRadius="20dp"
+        android:layout_marginHorizontal="60dp"
+        android:layout_below="@+id/llWaist"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false">
+
+    </com.google.android.material.button.MaterialButton>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/calculateBodyFatButton"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvBodyFatResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Your body fat % is: "
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/tvBodyFatValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="30dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
